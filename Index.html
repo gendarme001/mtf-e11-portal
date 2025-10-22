@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MTF E-11 - Portail de Signalement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background:#0d0d0d; color:white; font-family:Arial, sans-serif; padding:20px; max-width:600px; margin:auto;}
+        h1 { text-align:center; border-bottom:1px solid #444; padding-bottom:10px;}
+        label { display:block; margin-top:15px; font-weight:bold;}
+        input, textarea { width:100%; padding:10px; margin-top:5px; background:#1a1a1a; border:1px solid #333; color:white;}
+        button { margin-top:15px; padding:12px; width:100%; background:#b00000; border:none; color:white; font-weight:bold; cursor:pointer;}
+        button:hover { background:#d00000;}
+        .note { font-size:0.8em; color:#aaa; margin-top:10px;}
+    </style>
+</head>
+<body>
+    <h1>MTF E-11 - Signalement Anonyme</h1>
+    <form action="https://formspree.io/f/xdkwrawg" method="POST" enctype="multipart/form-data">
+        <label>Votre Message (obligatoire) :</label>
+        <textarea name="message" rows="6" required placeholder="Décrivez votre signalement ici..."></textarea>
+
+        <label>Pièce jointe (optionnel) :</label>
+        <input type="file" name="file">
+
+        <label>Contact (optionnel) :</label>
+        <input name="contact" placeholder="Email ou moyen de réponse (facultatif)">
+
+        <button type="submit">Envoyer</button>
+        <p class="note">Votre signalement restera confidentiel. N'incluez aucune information personnelle si vous souhaitez rester anonyme.</p>
+    </form>
+</body>
+</html>
